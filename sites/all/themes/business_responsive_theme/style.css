@@ -389,7 +389,7 @@ audio {
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
-  border-bottom: 2px solid rgb(251, 90, 2);
+  border-bottom: 2px solid rgba(206, 17, 38, 255);
   background: none repeat scroll 0 0 rgb(39, 39, 39);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.03);
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.03);
@@ -445,10 +445,10 @@ ul li, ul.menu li, ul.links li, .item-list ul li {
 #main-menu li a.active{
   color: #FFF;
   text-decoration: none;
-  background: none repeat scroll 0 0 rgb(251, 90, 2);
+  background: none repeat scroll 0 0 rgba(0, 122, 61, 240);
 }
 #main-menu li li a.active{
-  background: rgb(30, 39, 46);
+  background: rgba(0, 122, 61, 240);
 }
 
 .drop-down-toggle {
@@ -815,7 +815,7 @@ body.sidebar-second #sidebar-second {
   margin-bottom: 10px;
   font-size: 16px;
   font-weight: bold;
-  color: rgb(251, 90, 2);
+  color: hsla(353, 53%, 52%, 1);
 }
 
 #footer-area ul.menu li a.active{
@@ -1473,12 +1473,12 @@ ol.search-results { padding-left: 0; }
 #footer {
   clear:both;
   color: #8A8A8A;
-  background: rgb(39, 39, 39);
+  background: hsla(150, 49%, 21.9%, 1);
   border-top: 1px solid #CFD7DB;
 }
 
 #footer a{
-  color: rgb(251, 90, 2);
+  color: #fff;
 }
 
 #footer_wrapper{
@@ -1531,7 +1531,7 @@ ol.search-results { padding-left: 0; }
   font-family: Arial;
   overflow: auto;
   padding: 10px 0px;
-  background: #000;
+  background: rgba(0, 0, 0, 255);
 }
 
 .footer_inner_credit{
