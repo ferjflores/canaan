@@ -374,6 +374,7 @@ audio {
 #site-title a{
   float: left;
   line-height: 100%;
+  letter-spacing: -0.3px;
 }
 
 #site-description {
