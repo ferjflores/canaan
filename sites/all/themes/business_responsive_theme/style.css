@@ -91,12 +91,17 @@ body {
 }
 
 a {
-  color: rgb(251, 90, 2);
+  color: rgba(206, 17, 38, 255);
   text-decoration:none;
 }
 
+body.front .view a {
+  font-weight: 600;
+  font-size: 14px;
+}
+
 a:hover {
-  color: rgb(230, 80, 0);
+  color: rgba(206, 17, 38, 150)
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -568,12 +573,13 @@ ul li, ul.menu li, ul.links li, .item-list ul li {
 }
 
 .nivo-caption {
-  background: rgba(255, 255, 255, .6);
+  background: rgba(0, 0, 0, .6);
   margin: 20px;
   width: 60%;
-  font-size: 13px;
+  font-size: 22px;
   padding: 20px;
   font-family: Arial, sans-serif;
+  font-weight: bold;
   color: rgb(0, 0, 0);
   line-height: 120%;
 }
@@ -1576,4 +1582,49 @@ ol.search-results { padding-left: 0; }
 
 ul.menu li{
   padding-left: 15px;
+}
+
+.views-nivo-slider {
+    width: auto !important;
+    height: auto !important;
+}
+
+.views-nivo-slider img.nivo-main-image {
+    width: auto !important;
+    height: auto !important;
+}
+
+.nivo-caption a {
+  border: none !important;
+}
+
+.view-index.view-display-id-page_1 .view-content div.views-row {
+  display: inline-block;
+  width: 43%;
+  vertical-align: top;
+  margin-bottom: 40px;
+}
+
+.view-index.view-display-id-page_1 .view-content div.views-row-even {
+  margin-left: 13.5%;
+}
+
+.view-index.view-display-id-page_1 .view-content div.views-row .views-field-field-imagen {
+  float: left;
+}
+
+
+.view-index.view-display-id-page_1 .view-content div.views-row .views-field-title-1 a {
+  background: #696F72;
+  border-radius: 4px;
+  color: #FFF;
+  font-weight: normal;
+  padding: 3px 8px;
+  float: left;
+  clear:both;
+}
+
+body.front .view-radio iframe {
+  width: 267px;
+  height: 219px;
 }
