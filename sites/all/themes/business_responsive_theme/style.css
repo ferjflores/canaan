@@ -1650,4 +1650,41 @@ body.front .view-header h2 a {
   font-size: 18px;
 
 }
+body.front .view-index.view-display-id-page_1 .views-field-created {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 9px;
+}
+
+#footer-area .view a {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/*body.front .view-index.view-display-id-page_1 .views-field-field-imagen {
+  width: 38.85%;
+  border: #EEE 1px solid;
+  margin-bottom: 1%;
+  padding: 5px;
+  background-color: #F2F2F2;
+}*/
+/*body.front .view-index.view-display-id-page_1 .views-field-field-imagen .field-content {
+  width: 100%;
+  padding-top: 85.17%;
+  position: relative;
+}
+
+body.front .view-index.view-display-id-page_1 .views-field-field-imagen .field-content a {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+body.front .view-index.view-display-id-page_1 .views-field-field-imagen .field-content img {
+  border: none;
+  padding: 0;
+}*/
 
