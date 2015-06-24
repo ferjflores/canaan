@@ -32,5 +32,14 @@ jQuery(document).ready(function($) {
       $(this).parent().children('ul').slideToggle(250);
     });
   }
- 
 });
+
+(function($) {
+  $(window).bind('load', function() {
+    var altura = $('#top-area').outerHeight(true);
+    console.log(altura);
+    $('#top-area .column').each( function () {
+     $(this).height(altura);
+     });
+  });
+})(jQuery);

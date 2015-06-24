@@ -26,8 +26,8 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
+  font-size: 102%;
+  /*font: inherit;*/
   vertical-align: baseline;
 }
 
@@ -82,10 +82,9 @@ table {
 }
 
 body {
-  font-family: Tahoma, Georgia, Arial, sans-serif;
   background: #fff;
   color: #515F5C;
-  font-family: Arial,Helvetica,sans-serif;
+  font-family: "Source Sans Pro",Arial,Helvetica,sans-serif;
   font-size:12px;
   line-height:160%;
 }
@@ -97,7 +96,7 @@ a {
 
 body.front .view a {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 17px;
 }
 
 a:hover {
@@ -106,7 +105,7 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
   color: rgb(34, 46, 54);
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: "Merriweather","Arial", "Helvetica", sans-serif;
   font-weight: normal;
   margin-bottom:6px;
   line-height: 125%;
@@ -379,7 +378,7 @@ audio {
 #site-title a{
   float: left;
   line-height: 100%;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.8px;
 }
 
 #site-description {
@@ -442,9 +441,10 @@ ul li, ul.menu li, ul.links li, .item-list ul li {
   text-align: center;
   padding: 13px 23px;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
   font-weight: bold;
+  letter-spacing: -0.2px;
 }
 
 #main-menu a:hover,
@@ -1433,6 +1433,7 @@ ol.search-results { padding-left: 0; }
 
 #top-area {
   position:relative;
+  margin-bottom: 30px;
 }
 
 #top-area .block {
@@ -1589,6 +1590,7 @@ ul.menu li{
     height: auto !important;
 }
 
+.views-nivo-slider img,
 .views-nivo-slider img.nivo-main-image {
     width: auto !important;
     height: auto !important;
@@ -1605,8 +1607,8 @@ ul.menu li{
   margin-bottom: 40px;
 }
 
-.view-index.view-display-id-page_1 .view-content div.views-row-even {
-  margin-left: 13.5%;
+.view-index.view-display-id-page_1 .view-content div.views-row-odd {
+  margin-right: 13%;
 }
 
 .view-index.view-display-id-page_1 .view-content div.views-row .views-field-field-imagen {
@@ -1619,12 +1621,33 @@ ul.menu li{
   border-radius: 4px;
   color: #FFF;
   font-weight: normal;
-  padding: 3px 8px;
+  padding: 2px 6px;
   float: left;
-  clear:both;
+  clear: both;
+  font-size: 14px;
 }
 
 body.front .view-radio iframe {
-  width: 267px;
-  height: 219px;
+  width: 100%;
+  height: 100%;
+  min-height: 199px;
 }
+
+body.front .view-footer a {
+  background: #696F72;
+  border-radius: 4px;
+  color: #FFF;
+  font-weight: normal;
+  padding: 2px 6px;
+  float: left;
+  clear: both;
+  font-size: 14px;
+  position: absolute;
+  bottom: 2px;
+}
+body.front .view-header h2 a {
+  color: rgb(34, 46, 54);
+  font-size: 18px;
+
+}
+
