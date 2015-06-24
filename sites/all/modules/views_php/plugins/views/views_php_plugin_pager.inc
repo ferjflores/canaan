@@ -52,13 +52,17 @@ class views_php_plugin_pager extends views_php_plugin_wrapper  {
   }
 
   protected function update_wrapped_pager() {
-    $this->wrapped->total_items = count($this->wrapped->view->result);
-    $this->wrapped->update_page_info();
+     if (!isset($this->wrapped->total_items)) {
+       $this->wrapped->total_items = count($this->wrapped->view->result);
+     }
+     $this->wrapped->update_page_info();    $this->wrapped->update_page_info();
 
     $item_per_page = $this->wrapped->get_items_per_page();
     if ($item_per_page > 0) {
       $offset = $this->wrapped->get_current_page() * $item_per_page + $this->wrapped->get_offset();
-      $this->wrapped->view->result = array_slice($this->wrapped->view->result, $offset, $item_per_page);
+      if (!isset($this->wrapped->view->result)) {
+        $this->wrapped->view->result = array_slice($this->wrapped->view->result, $offset, $item_per_page);
+      }
     }
   }
 
