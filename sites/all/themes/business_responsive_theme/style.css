@@ -792,7 +792,7 @@ body.sidebar-second #sidebar-second {
 }
 
 .node h2.title, .page-title {
-  font-size: 20px;
+  font-size: 27px;
 }
 
 .node h2.title a{
@@ -1659,6 +1659,27 @@ body.front .view-index.view-display-id-page_1 .views-field-created {
 #footer-area .view a {
   font-size: 14px;
   font-weight: normal;
+}
+
+.view-taxonomy-term .views-field-field-imagen {
+  float: left;
+  margin-right: 10px;
+}
+
+
+.view-taxonomy-term .views-row {
+  float: left;
+  margin-bottom: 45px;
+}
+
+.view-taxonomy-term .views-field-created {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+.view-taxonomy-term .views-field-body {
+  line-height: 21px;
 }
 
 /*body.front .view-index.view-display-id-page_1 .views-field-field-imagen {
