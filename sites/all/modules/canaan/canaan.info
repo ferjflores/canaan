@@ -1,0 +1,9 @@
+name = Canaan
+description = Modulo con varios hooks para la página canaan
+dependencies[] = views (3.x)
+core = 7.x
+
+
+version = "7.x-dev"
+core = "7.x"
+project = "canaan"
