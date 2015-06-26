@@ -65,9 +65,34 @@ function canaan_views_query_alter(&$view, &$query) {
 
 function canaan_views_pre_render(&$view) {
   if ($view->name == 'radio' && $view->current_display == "radio_page") {
-    $my_field = $view->field['my_field'];
-    unset($view->field['my_field']);
-    $view->field = array_merge(array('my_field' => $my_field), $view->field);
+
+    //ordenar campos
+    $titulo = $view->field['titulo'];
+    $fecha = $view->field['fecha'];
+    unset($view->field['titulo'], $view->field['fecha']);
+    $view->field = array_merge(array('fecha' => $fecha, 'titulo' => $titulo), $view->field);
+
+    //asignar valores a los campos reordenados
+    $nid = $view->result[0]->file_usage_id;
+    $node = node_load($nid);
+
+
+    $link = l($node->title, 'node/'.$nid);
+    $titulo = theme('html_tag', array(
+      'element' => array(
+        '#tag' => 'h2',
+        '#value' => $link,
+      ),
+    ));
+    $view->field['titulo']->options['alter']['text'] =  $titulo;
+
+    $fecha = theme('html_tag', array(
+      'element' => array(
+        '#tag' => 'div',
+        '#value' => date('l, j \d\e F \d\e Y', $node->created),
+      ),
+    ));
+    $view->field['fecha']->options['alter']['text'] =  $fecha;
   }
 }
 
@@ -77,10 +102,17 @@ function canaan_views_pre_view(&$view, &$display_id, &$args) {
 
     $view->add_item($view->current_display, 'field', 'views', 'nothing', array(
       'label' => NULL,
-      'alter' => array('text' => 'My field text'),
-      'element_class' => 'my-field',
+      'alter' => array('text' => 'titulo'),
+      'element_class' => 'titulo',
       'element_default_classes' => 0,
-    ), 'my_field');
+    ), 'titulo');
+
+    $view->add_item($view->current_display, 'field', 'views', 'nothing', array(
+      'label' => NULL,
+      'alter' => array('text' => 'fecha'),
+      'element_class' => 'fecha',
+      'element_default_classes' => 0,
+    ), 'fecha');
   }
 }
 
