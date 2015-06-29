@@ -2825,3 +2825,10 @@ body.adminimal-theme .custom_css_not_found .css_path {
 body.page-admin-structure-views-view #views-ui-edit-display-form #edit-options #edit-style-options-row fieldset#edit-style-options-row--2 {
   float: left;
 }
+
+.node-noticia-form div.field-type-taxonomy-term-reference,
+.node-noticia-form div.field-name-field-imagen,
+.node-noticia-form div.field-name-field-slideshow {
+  float: right;
+  margin-left: 30px;
+}
