@@ -102,7 +102,7 @@ function canaan_views_query_alter(&$view, &$query) {
     $query_nids->join('field_data_field_tipo_noticia', 'ftn', 'n.nid = ftn.entity_id');
     $query_nids->join('field_data_field_slideshow', 'fs', 'n.nid = fs.entity_id');
     $query_nids->condition('ftn.field_tipo_noticia_tid', 5)
-      ->condition('fs.field_slideshow_value', 5)
+      ->condition('fs.field_slideshow_value', 1)
       ->condition('n.status', 1)
       ->orderBy('n.created', 'DESC')
       ->fields('n', array('nid'))

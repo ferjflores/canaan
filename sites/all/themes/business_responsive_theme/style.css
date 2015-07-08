@@ -1449,7 +1449,7 @@ ol.search-results { padding-left: 0; }
   width: 32%;
   margin: 1.8% 0;
   margin: 0 5px;
-  background: rgb(252, 252, 252);
+  background: #60BD68;
   border: 1px solid rgb(241, 241, 241);
 }
 
@@ -1680,6 +1680,13 @@ body.front .view-index.view-display-id-page_1 .views-field-created {
 
 .view-taxonomy-term .views-field-body {
   line-height: 21px;
+}
+
+
+body.front .view-display-id-block_2 a img {
+  background: #60BD68;
+  box-shadow: 0 0 3px rgba(0, 122, 61, 240);
+  border: rgba(0, 122, 61, 240) 1px solid;
 }
 
 /*body.front .view-index.view-display-id-page_1 .views-field-field-imagen {
