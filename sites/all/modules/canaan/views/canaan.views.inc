@@ -60,6 +60,65 @@ function canaan_views_query_alter(&$view, &$query) {
       $query->add_where(2, 'node.nid', $nids, 'NOT IN');
     }
   }
+  if ($view->name == 'index' && $view->current_display == "slideshow") {
+    $nids = array();
+    //nodos radio
+    $query_nids = db_select('node', 'n');
+    $query_nids->join('field_data_field_tipo_noticia', 'ftn', 'n.nid = ftn.entity_id');
+    $query_nids->condition('ftn.field_tipo_noticia_tid', 4)
+      ->condition('n.status', 1)
+      ->orderBy('n.created', 'DESC')
+      ->fields('n', array('nid'))
+      ->range(0, 1);
+    $resultado = $query_nids->execute();
+    $count = $resultado->rowCount();
+
+    if ($count > 0) {
+      foreach ($resultado as $row) {
+        $nids[] = $row->nid;
+      }
+    }
+
+    //nodos mision diáspora
+    $query_nids = db_select('node', 'n');
+    $query_nids->join('field_data_field_tipo_noticia', 'ftn', 'n.nid = ftn.entity_id');
+    $query_nids->condition('ftn.field_tipo_noticia_tid', 3)
+      ->condition('n.status', 1)
+      ->orderBy('n.created', 'DESC')
+      ->fields('n', array('nid'))
+      ->range(0, 1);
+    $resultado = $query_nids->execute();
+    $count = $resultado->rowCount();
+
+    if ($count > 0) {
+      foreach ($resultado as $row) {
+        $nids[] = $row->nid;
+      }
+    }
+
+    //nodos evento
+    $query_nids = db_select('node', 'n');
+    $query_nids->join('field_data_field_tipo_noticia', 'ftn', 'n.nid = ftn.entity_id');
+    $query_nids->join('field_data_field_slideshow', 'fs', 'n.nid = fs.entity_id');
+    $query_nids->condition('ftn.field_tipo_noticia_tid', 4)
+      ->condition('fs.field_slideshow_value', 5)
+      ->condition('n.status', 1)
+      ->orderBy('n.created', 'DESC')
+      ->fields('n', array('nid'))
+      ->range(0, 1);
+    $resultado = $query_nids->execute();
+    $count = $resultado->rowCount();
+
+    if ($count > 0) {
+      foreach ($resultado as $row) {
+        $nids[] = $row->nid;
+      }
+    }
+
+    if (!empty($nids)) {
+      $query->add_where(2, 'node.nid', $nids, 'IN');
+    }
+  }
 }
 
 
