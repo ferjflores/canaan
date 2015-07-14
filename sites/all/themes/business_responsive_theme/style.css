@@ -1683,11 +1683,29 @@ body.front .view-index.view-display-id-page_1 .views-field-created {
 }
 
 
-body.front .view-display-id-block_2 a img {
+body.front #top-area .content a img {
   background: #60BD68;
   box-shadow: 0 0 3px rgba(0, 122, 61, 240);
   border: rgba(0, 122, 61, 240) 1px solid;
 }
+
+body.page-node .region-sidebar-second {
+  padding-top: 160px;
+}
+
+body.page-taxonomy-term .region-sidebar-second {
+  padding-top: 40px;
+}
+
+
+body.page-node .region-sidebar-second .block {
+  margin-bottom: 35px;
+}
+
+.block-simplenews {
+  margin-top: 40px;
+}
+
 
 /*body.front .view-index.view-display-id-page_1 .views-field-field-imagen {
   width: 38.85%;

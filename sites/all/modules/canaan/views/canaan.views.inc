@@ -123,7 +123,7 @@ function canaan_views_query_alter(&$view, &$query) {
 }
 
 
-function canaan_views_pre_render(&$view) {
+/*function canaan_views_pre_render(&$view) {
   if ($view->name == 'radio' && $view->current_display == "radio_page") {
 
     //ordenar campos
@@ -175,5 +175,5 @@ function canaan_views_pre_view(&$view, &$display_id, &$args) {
     ), 'fecha');
   }
 }
-
+*/
 ?>
